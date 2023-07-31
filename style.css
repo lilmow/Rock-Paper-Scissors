@@ -1,0 +1,92 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+p{
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f7fb;
+}
+.container{
+  /* width: 70vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* padding: 2rem 7rem; */
+  /* border-radius: 14px; */
+  /* background: #fff; */
+  background-color: rgb(25, 25, 25);
+  padding: 1.5rem;
+}
+
+.let-play{
+  font-size: 1.5rem; 
+}
+
+.game{
+  font-size: 1.8rem; 
+}
+
+.js-result{
+  font-size: 25px;
+  font-weight: bold;
+  /* padding: 15px 0px; */
+}
+
+.js-score{
+  padding: 20px;
+}
+
+.option-images{
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  /* background-color: red; */
+}
+
+.option-btn{
+  background-color: transparent;
+  width: 120px;
+  height: 120px;
+  border: 3px solid white; 
+  border-radius: 60px; 
+  margin-right: 15px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.option-btn:hover{
+  opacity: 1;
+}
+
+.option-btn:active{
+  opacity: 1;
+}
+
+.move-emoji{
+  height: 50px;
+}
+
+.reset-score,
+.auto-play{
+  background: white;
+  border: none;
+  font-size: 15px;
+  padding: 8px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
