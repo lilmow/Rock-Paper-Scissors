@@ -31,16 +31,13 @@ main {
   padding: 1.5rem;
 }
 
-.let-play{
-  font-size: 1.5rem; 
-}
-
-.game{
+header p{
   font-size: 1.8rem; 
 }
 
 .js-result{
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 1.5rem;
   font-weight: bold;
   /* padding: 15px 0px; */
 }
@@ -72,7 +69,7 @@ main {
   opacity: 1;
 }
 
-.option-btn:active{
+.option-btn.active{
   opacity: 1;
 }
 
