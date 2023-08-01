@@ -14,6 +14,7 @@ let resultElement = document.querySelector('.js-result'),
   paperBtnElement = document.querySelector('.js-paper-btn'),
   scissorsBtnElement = document.querySelector('.js-scissors-btn'),
   resetScoreElement = document.querySelector('.js-reset-score'),
+  comfirmationElement = document.querySelector('.js-reset-comfirmation'),
   autoPlayElement = document.querySelector('.js-auto-play');
   optionElement = document.querySelectorAll('.option-btn');
 
@@ -21,7 +22,6 @@ let resultElement = document.querySelector('.js-result'),
 // Add eventListener to Buttons
 rockBtnElement.addEventListener('click', () => {
   playGame('rock')
-  // rockBtnElement.classList.add("active");
 })
 paperBtnElement.addEventListener('click', () => {
   playGame('paper')
@@ -30,11 +30,12 @@ scissorsBtnElement.addEventListener('click', () => {
   playGame('scissors')
 })
 resetScoreElement.addEventListener('click', () => {
-  reset()
+  showResetComfirmation()
 })
-optionElement.addEventListener('click', () => {
+autoPlayElement.addEventListener('click', () => {
   autoPlay()
 })
+
 // Loop through each option image element
 optionElement.forEach((image, index) => {
   image.addEventListener("click", (e) => {
@@ -135,7 +136,18 @@ function reset() {
   scores.draw = 0
   saveScore()
   localStorage.removeItem('scores')
-} 
+}
+
+// Reset Comfirmation
+function showResetComfirmation() {
+  comfirmationElement.innerHTML = `
+    Are you sure you want to reset the score?
+    <button class="confirm-btn yes-btn">Yes</button>
+    <button class="confirm-btn no-btn">No</button>
+  `
+
+  
+}
 
 // AutoPlay
 let isAutoPlay = false

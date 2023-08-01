@@ -78,7 +78,8 @@ header p{
 }
 
 .reset-score,
-.auto-play{
+.auto-play,
+.confirm-btn{
   background: white;
   border: none;
   font-size: 15px;
@@ -87,3 +88,11 @@ header p{
   cursor: pointer;
 }
 
+.reset-confirmation{
+  gap: 10px;
+  color: white;
+}
+
+.yes-btn{
+  margin-left: 10px;
+}
