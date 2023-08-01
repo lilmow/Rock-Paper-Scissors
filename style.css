@@ -16,20 +16,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: #f6f7fb; */
   background-color: rgb(25, 25, 25);
 
 }
 .container{
-  /* width: 70vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  /* padding: 2rem 7rem; */
-  /* border-radius: 14px; */
-  /* background: #fff; */
-  /* background-color: rgb(25, 25, 25); */
   padding: 1.5rem;
 }
 
@@ -38,10 +31,8 @@ header p{
 }
 
 .js-result{
-  /* font-size: 25px; */
   font-size: 1.5rem;
   font-weight: bold;
-  /* padding: 15px 0px; */
 }
 
 .js-score{
@@ -52,7 +43,6 @@ header p{
   display: flex;
   padding: 10px;
   gap: 10px;
-  /* background-color: red; */
 }
 
 .option-btn{
