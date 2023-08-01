@@ -14,7 +14,7 @@ let resultElement = document.querySelector('.js-result'),
   paperBtnElement = document.querySelector('.js-paper-btn'),
   scissorsBtnElement = document.querySelector('.js-scissors-btn'),
   resetScoreElement = document.querySelector('.js-reset-score'),
-  comfirmationElement = document.querySelector('.js-reset-comfirmation'),
+  confirmationElement = document.querySelector('.js-reset-confirmation'),
   autoPlayElement = document.querySelector('.js-auto-play');
   optionElement = document.querySelectorAll('.option-btn');
 
@@ -30,7 +30,8 @@ scissorsBtnElement.addEventListener('click', () => {
   playGame('scissors')
 })
 resetScoreElement.addEventListener('click', () => {
-  showResetComfirmation()
+  showResetConfirmation()
+  // reset()
 })
 autoPlayElement.addEventListener('click', () => {
   autoPlay()
@@ -48,6 +49,7 @@ optionElement.forEach((image, index) => {
       index !== index2 && image2.classList.remove("active");
     });
 })})
+
 
 // Generating a Random Move
 function pickComputerMove() {
@@ -138,14 +140,27 @@ function reset() {
   localStorage.removeItem('scores')
 }
 
-// Reset Comfirmation
-function showResetComfirmation() {
-  comfirmationElement.innerHTML = `
+// Reset Confirmation
+function showResetConfirmation() {
+  confirmationElement.innerHTML = `
     Are you sure you want to reset the score?
-    <button class="confirm-btn yes-btn">Yes</button>
-    <button class="confirm-btn no-btn">No</button>
+    <button class="confirm-btn js-yes-btn">Yes</button>
+    <button class="confirm-btn js-no-btn">No</button>
   `
 
+  document.querySelector('.js-yes-btn').addEventListener('click', () =>{
+    reset()
+    hideResetConfirmation()
+  })
+
+  document.querySelector('.js-no-btn').addEventListener('click', () =>{
+    hideResetConfirmation()
+  })
+}
+
+// hide Confirmation
+function hideResetConfirmation() {
+  confirmationElement.innerHTML = ""
   
 }
 

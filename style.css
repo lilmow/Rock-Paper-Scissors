@@ -16,7 +16,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f6f7fb;
+  /* background: #f6f7fb; */
+  background-color: rgb(25, 25, 25);
+
 }
 .container{
   /* width: 70vw; */
@@ -27,7 +29,7 @@ main {
   /* padding: 2rem 7rem; */
   /* border-radius: 14px; */
   /* background: #fff; */
-  background-color: rgb(25, 25, 25);
+  /* background-color: rgb(25, 25, 25); */
   padding: 1.5rem;
 }
 
